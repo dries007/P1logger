@@ -1,3 +1,8 @@
+"""
+Copyright (c) 2020 Dries007
+This code is licensed under MIT license (see LICENSE.txt for details)
+"""
+
 import os
 import argparse
 

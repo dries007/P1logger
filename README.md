@@ -8,7 +8,17 @@ Be aware you might have to activate this port before you can use it.
 I'm Flemish, so this program primarily targets meters from Fluvius, but it should work for all meters following roughly the same standard.
 If you live in another region and would like to test it out and/or adapt the required changes, please let me know.
 
-I've saved a number of related documents (technical specs) in the [docs](./docs) folder. 
+I've saved a number of related documents (technical specs) in the [docs](./docs) folder.
+
+## Dashboards
+
+I use Grafana to monitor the data. I made an export of my dashboard, you can import this to save yourself some time setting everything up. The dashboard is setup with a datasource called "p1log".
+
+The file is called [grafana.json](./grafana.json).
+
+## License
+
+The code, dashboard, dockerfile and other original works are released under the MIT license.
 
 ## Usage
 

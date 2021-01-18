@@ -1,4 +1,7 @@
 """
+Copyright (c) 2020 Dries007
+This code is licensed under MIT license (see LICENSE.txt for details)
+
 OBIS object identifiers.
 Their only purpose here is to inform the unit conversion.
 """
