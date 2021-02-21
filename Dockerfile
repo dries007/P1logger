@@ -1,6 +1,8 @@
 FROM python:3.9-alpine
 
-RUN RUN apk add --no-cache tzdata
+LABEL org.opencontainers.image.source https://github.com/dries007/P1logger
+
+RUN apk add --no-cache tzdata
 
 WORKDIR /app
 

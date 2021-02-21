@@ -22,23 +22,23 @@ The code, dashboard, dockerfile and other original works are released under the 
 
 ## Usage
 
-Recommended: build and run the provided Dockerfile:
+Recommended: Run the provided docker image.
 
 ```
-# Run in git root.
-docker build -t p1logger .
-docker run -d -it --name p1logger --device=/dev/ttyUSB0 -v /etc/localtime:/etc/localtime:ro -e P1_INFLUX="influxdb://172.17.0.1:8086/p1log" p1logger
+docker run -d --name p1logger --device=/dev/ttyUSB0 -v /etc/localtime:/etc/localtime:ro --network host --restart unless-stopped ghcr.io/dries007/p1logger:latest
 ```
 
 Nodes:
 + `--device /dev/ttyUSB0` grants the container access to the USB-serial device. You cannot use a volume for this.
 + The `/etc/localtime` read only volume is required make sure the timezone inside the container is the same as your host machine, which is presumed to be the timezone of your meter. If not, use the TZ env var to set it.
 + You must provide a valid InfluxDB dsn. The one from the example command assumes you're running it on the host system.
-  If you'd like to use a fully dockerized setup, create a docker compose yml. 
+  If you'd like to use a fully dockerized setup, create a docker compose file.
 
 Alternatively use standard python methods to run the `P1logger` folder as a module.
 
 Accepted arguments are found in [P1logger's main file](./P1logger/__main__.py).
+
+**Note** This module generates 1 row per second. I recommend you create a retention policy and downsample setup if you are using something with limited storage capacity, like a Raspberry Pi with SD card.
 
 ## Known Hardware
 

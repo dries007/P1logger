@@ -1,0 +1,23 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Build:dockerimage
+      uses: docker/build-push-action@v2
+      with:
+        username: dries007
+        password: ${{ secrets.PAT }}
+        registry: ghcr.io
+        always_pull: true
+        repository: dries007/p1logger
+        cache_froms: dries007/p1logger:latest
+        tags: latest
