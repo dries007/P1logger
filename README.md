@@ -10,6 +10,8 @@ If you live in another region and would like to test it out and/or adapt the req
 
 I've saved a number of related documents (technical specs) in the [docs](./docs) folder.
 
+Related Home Assistant integration: https://github.com/dries007/HA_P1Logger
+
 ## Dashboards
 
 I use Grafana to monitor the data. I made an export of my dashboard, you can import this to save yourself some time setting everything up. The dashboard is setup with a datasource called "p1log".
