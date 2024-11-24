@@ -1,0 +1,1 @@
+/usr/bin/avr-gcc -mmcu=atmega128a -DF_CPU=11059200 -Os -g -mmcu=atmega128a CMakeFiles/main.dir/main.c.o -o main 

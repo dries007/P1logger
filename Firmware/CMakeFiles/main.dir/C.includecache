@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/dries/Projects/P1logger/Firmware/main.c
+avr/io.h
+-
+util/delay.h
+-
+avr/interrupt.h
+-
+avr/wdt.h
+-
+util/twi.h
+-
+string.h
+-
+

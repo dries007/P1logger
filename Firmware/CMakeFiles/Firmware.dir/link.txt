@@ -1,0 +1,1 @@
+/usr/bin/avr-gcc -mmcu=atmega128a -DF_CPU=11059200 -Os -mmcu=atmega128a CMakeFiles/Firmware.dir/main.c.o -o Firmware 

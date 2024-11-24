@@ -1,0 +1,3 @@
+/home/dries/Projects/P1logger/Firmware/CMakeFiles/rebuild_cache.dir
+/home/dries/Projects/P1logger/Firmware/CMakeFiles/edit_cache.dir
+/home/dries/Projects/P1logger/Firmware/CMakeFiles/main.dir
